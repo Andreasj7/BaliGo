@@ -7,9 +7,10 @@
     android:padding="16dp">
 
     <TextView
+        android:id="@+id/resultTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Rekomendasi!"
+        android:text="Rekomendasi Lokasi!"
         android:textStyle="bold"
         android:textSize="24sp"
         android:paddingBottom="16dp" />

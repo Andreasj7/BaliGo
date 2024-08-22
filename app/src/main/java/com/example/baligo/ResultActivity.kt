@@ -13,17 +13,13 @@ class ResultActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_result)
+        setContentView(R.layout.activity_result) // Ensure this layout file exists
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Dummy data untuk rekomendasi
-        val recommendations = listOf(
-            Recommendation(R.drawable.denpasar, "Tegal Wangi Beach", 4.5f, "Tempat ini bagus untuk dikunjungi dan menginap"),
-            Recommendation(R.drawable.denpasar, "Seminyak", 4.0f, "Tempat ini bagus untuk dikunjungi dan menginap"),
-            Recommendation(R.drawable.denpasar, "Nusa Penida", 5.0f, "Tempat ini bagus untuk dikunjungi dan menginap")
-        )
+        // Retrieve recommendations from intent
+        val recommendations: List<Recommendation> = intent.getParcelableArrayListExtra("recommendations") ?: emptyList()
 
         recyclerView.adapter = RecommendationAdapter(recommendations)
     }

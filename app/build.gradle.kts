@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id 'kotlin-parcelize'
 }
 
 android {
@@ -35,6 +36,7 @@ android {
     }
     buildFeatures {
         viewBinding = true
+        mlModelBinding = true
     }
 }
 
@@ -46,6 +48,8 @@ dependencies {
     implementation(libs.androidx.constraintlayout)
     implementation(libs.androidx.navigation.fragment.ktx)
     implementation(libs.androidx.navigation.ui.ktx)
+    implementation(libs.tensorflow.lite.metadata)
+    implementation(libs.kotlin.parcelize.runtime)
     dependencies {
         // ... your other dependencies ...
 
@@ -63,5 +67,7 @@ dependencies {
         implementation("org.tensorflow:tensorflow-lite:2.12.0")
         implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
         implementation ("org.tensorflow:tensorflow-lite-task-vision:0.2.0")
+        implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.8.0") // Use the appropriate version
+        implementation ("androidx.core:core-ktx:1.9.0") // Or your latest version
     }
 }
