@@ -59,6 +59,9 @@ dependencies {
         androidTestImplementation(libs.androidx.espresso.core)
 
         // Add this line
-        implementation("com.google.android.material:material:1.4.0")
+        implementation("com.google.android.material:material:1.12.0")
+        implementation("org.tensorflow:tensorflow-lite:2.12.0")
+        implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
+        implementation ("org.tensorflow:tensorflow-lite-task-vision:0.2.0")
     }
 }
