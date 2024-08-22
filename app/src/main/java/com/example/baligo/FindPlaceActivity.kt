@@ -22,14 +22,10 @@ class FindPlaceActivity : AppCompatActivity() {
         }
         locationSpinner= findViewById(R.id.locationSpinner)
         var items = arrayOf(
-            "Kab. Badung",
-            "Kab. Buleleng",
-            "Kab. Gianyar",
-            "Kab. Jembrana",
-            "Kab. Karangasem",
-            "Kab. Klungkung",
-            "Kab. Tabanan",
-            "Kota Denpasar"
+            "Kota Denpasar",
+            "Kabupaten Buleleng",
+            "Kabupaten Badung",
+            "Kabupaten Tabanan"
         )
 
         var adapter = ArrayAdapter(this, R.layout.spinner_item, items)
@@ -39,7 +35,6 @@ class FindPlaceActivity : AppCompatActivity() {
         recreationTypeSpinner = findViewById(R.id.recreationTypeSpinner)
         items = arrayOf(
             "Photo Spot",
-            "Water Sports",
             "Swimming",
             "Restaurant"
         )
@@ -48,7 +43,7 @@ class FindPlaceActivity : AppCompatActivity() {
         recreationTypeSpinner.adapter = adapter
 
         recreationTypeSpinner = findViewById(R.id.recreationTypeSpinner)
-        val items2 = arrayOf("Item 1", "Item 2", "Item 3")
+        val items2 = arrayOf("Photo Spot", "Swimming", "Restaurant")
         val adapter2 = ArrayAdapter(this, R.layout.spinner_item, items2)
         adapter2.setDropDownViewResource(R.layout.spinner_dropdown_item)
         recreationTypeSpinner.adapter = adapter2
