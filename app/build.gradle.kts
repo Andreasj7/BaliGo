@@ -1,7 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
-    id 'kotlin-parcelize'
 }
 
 android {
@@ -50,6 +49,7 @@ dependencies {
     implementation(libs.androidx.navigation.ui.ktx)
     implementation(libs.tensorflow.lite.metadata)
     implementation(libs.kotlin.parcelize.runtime)
+
     dependencies {
         // ... your other dependencies ...
 
@@ -62,12 +62,14 @@ dependencies {
         androidTestImplementation(libs.androidx.junit)
         androidTestImplementation(libs.androidx.espresso.core)
 
+
         // Add this line
-        implementation("com.google.android.material:material:1.12.0")
-        implementation("org.tensorflow:tensorflow-lite:2.12.0")
-        implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
-        implementation ("org.tensorflow:tensorflow-lite-task-vision:0.2.0")
-        implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.8.0") // Use the appropriate version
-        implementation ("androidx.core:core-ktx:1.9.0") // Or your latest version
+        implementation(libs.material)
+        implementation(libs.tensorflow.lite)
+        implementation(libs.tensorflow.lite.support)
+        implementation (libs.tensorflow.lite.task.vision)
+        implementation (libs.kotlin.stdlib) // Use the appropriate version
+        implementation (libs.androidx.core.ktx.v190) // Or your latest version
+
     }
 }
