@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <!-- Status dipilih -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="#77B1E0" /> <!-- Warna biru lebih terang ketika dipilih -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#6BA8E6"/>
+        </shape>
+    </item>
+
+    <!-- Status default -->
+    <item>
+        <shape>
+            <solid android:color="#6086BC" /> <!-- Warna biru default -->
+            <corners android:radius="12dp"/>
+            <stroke android:width="2dp" android:color="#6995C1"/>
+        </shape>
+    </item>
+
+</selector>
