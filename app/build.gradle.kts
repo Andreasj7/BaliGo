@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        mlModelBinding = true
+    }
 }
 
 dependencies {
@@ -41,6 +44,9 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.tensorflow.lite.gpu)
+    implementation(libs.tensorflow.lite.support)
+    implementation(libs.tensorflow.lite.metadata)
     dependencies {
         // ... your other dependencies ...
 
@@ -54,6 +60,12 @@ dependencies {
         androidTestImplementation(libs.androidx.espresso.core)
 
         // Add this line
-        implementation("com.google.android.material:material:1.4.0")
+        implementation(libs.material.v140)
+        dependencies {
+            // ... other dependencies
+
+            implementation("org.tensorflow:tensorflow-lite:2.12.0")
+            implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
+        }
     }
 }
