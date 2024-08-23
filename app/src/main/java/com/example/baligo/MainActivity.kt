@@ -1,5 +1,7 @@
 package com.example.baligo
 
+import FindPlaceActivity
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -14,6 +16,8 @@ import com.example.baligo.adapters.ShowcaseAdapter
 class MainActivity : AppCompatActivity() {
     private lateinit var showcaseRV: RecyclerView
     private lateinit var findPlaceBtn: Button
+
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()

@@ -72,6 +72,8 @@ dependencies {
         implementation (libs.tensorflow.lite.task.vision)
         implementation (libs.kotlin.stdlib) // Use the appropriate version
         implementation (libs.androidx.core.ktx.v190) // Or your latest version
+        implementation ("com.github.bumptech.glide:glide:4.12.0")
+        annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
 
     }
 }
