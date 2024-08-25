@@ -17,6 +17,7 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -36,6 +37,9 @@ android {
     buildFeatures {
         mlModelBinding = true
     }
+    buildFeatures {
+        dataBinding = true
+    }
 }
 
 dependencies {
@@ -47,6 +51,7 @@ dependencies {
     implementation(libs.tensorflow.lite.gpu)
     implementation(libs.tensorflow.lite.support)
     implementation(libs.tensorflow.lite.metadata)
+    implementation(libs.androidx.recyclerview)
     dependencies {
         // ... your other dependencies ...
 
@@ -61,11 +66,12 @@ dependencies {
 
         // Add this line
         implementation(libs.material.v140)
-        dependencies {
-            // ... other dependencies
+        implementation("org.tensorflow:tensorflow-lite:2.12.0")
+        implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
+        implementation ("com.google.firebase:firebase-ml-model-interpreter:22.0.3")
+        implementation ("com.squareup.picasso:picasso:2.8")
+        implementation ("androidx.recyclerview:recyclerview:1.3.0")
+        implementation ("androidx.recyclerview:recyclerview-selection:1.1.0")
 
-            implementation("org.tensorflow:tensorflow-lite:2.12.0")
-            implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
-        }
     }
 }
