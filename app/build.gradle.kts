@@ -33,6 +33,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        mlModelBinding = true
+    }
 }
 
 dependencies {
@@ -41,6 +44,8 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
+    implementation(libs.tensorflow.lite.metadata)
+    implementation(libs.androidx.recyclerview)
     dependencies {
         // ... your other dependencies ...
 
@@ -55,5 +60,11 @@ dependencies {
 
         // Add this line
         implementation("com.google.android.material:material:1.4.0")
+        implementation("org.tensorflow:tensorflow-lite-gpu:2.12.0")
+        implementation("org.tensorflow:tensorflow-lite:2.12.0")
+        implementation("org.tensorflow:tensorflow-lite-support:0.4.3")
+        implementation ("androidx.recyclerview:recyclerview:1.2.1")
+        implementation("com.github.bumptech.glide:glide:4.13.0")
+        annotationProcessor("com.github.bumptech.glide:compiler:4.13.0")
     }
 }
